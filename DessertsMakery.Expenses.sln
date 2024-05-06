@@ -1,8 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F0E17DB4-0F25-47AD-B95C-A17E3D39E084}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B73736D5-AD8F-4B8C-BC80-7E8053E7022B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "unit", "unit", "{276D2820-AA65-4BB5-A4BB-99965964CE91}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "integration", "integration", "{89505AE2-FF00-4355-BFA5-EC8614CBF1A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{276D2820-AA65-4BB5-A4BB-99965964CE91} = {B73736D5-AD8F-4B8C-BC80-7E8053E7022B}
+		{89505AE2-FF00-4355-BFA5-EC8614CBF1A0} = {B73736D5-AD8F-4B8C-BC80-7E8053E7022B}
 	EndGlobalSection
 EndGlobal
