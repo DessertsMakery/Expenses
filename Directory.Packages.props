@@ -1,0 +1,11 @@
+<Project>
+    <PropertyGroup>
+        <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="8.0.4" />
+        <PackageVersion Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+        <PackageVersion Include="MongoDB.Driver" Version="2.25.0"/>
+        <PackageVersion Include="CSharpier.MsBuild" Version="0.28.2" />
+    </ItemGroup>
+</Project>
