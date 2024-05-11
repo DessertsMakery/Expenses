@@ -8,9 +8,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.OpenApi"/>
-        <PackageReference Include="Swashbuckle.AspNetCore"/>
-        <PackageReference Include="CSharpier.MsBuild"/>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+        <PackageReference Include="Swashbuckle.AspNetCore" />
+        <PackageReference Include="CSharpier.MsBuild" />
     </ItemGroup>
 
     <ItemGroup>
@@ -23,7 +23,11 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageVersion Update="Swashbuckle.AspNetCore" Version="6.5.0"/>
+        <PackageVersion Update="Swashbuckle.AspNetCore" Version="6.5.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\DessertsMakery.Expenses.Persistence\DessertsMakery.Expenses.Persistence.csproj" />
     </ItemGroup>
 
 </Project>
