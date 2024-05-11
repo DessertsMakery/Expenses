@@ -7,8 +7,15 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="MongoDB.Driver"/>
-        <PackageReference Include="CSharpier.MsBuild"/>
+        <PackageReference Include="Humanizer" />
+        <PackageReference Include="Microsoft.Extensions.Configuration" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+        <PackageReference Include="MongoDB.Driver" />
+        <PackageReference Include="CSharpier.MsBuild" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\DessertsMakery.Expenses.Common\DessertsMakery.Expenses.Common.csproj" />
     </ItemGroup>
 
 </Project>
