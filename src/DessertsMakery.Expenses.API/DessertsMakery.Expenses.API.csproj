@@ -5,6 +5,7 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+        <UserSecretsId>0352f382-4fcf-417c-a8a4-2de697dcb45f</UserSecretsId>
     </PropertyGroup>
 
     <ItemGroup>
@@ -20,10 +21,6 @@
         <Content Update="appsettings.Development.json">
             <DependentUpon>appsettings.json</DependentUpon>
         </Content>
-    </ItemGroup>
-
-    <ItemGroup>
-        <PackageVersion Update="Swashbuckle.AspNetCore" Version="6.5.0" />
     </ItemGroup>
 
     <ItemGroup>
