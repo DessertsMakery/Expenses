@@ -56,7 +56,7 @@ public static class Dependencies
 
     private static object MongoCollectionFactory(this IServiceProvider provider, Type entityType)
     {
-        var collectionNamingStrategy = provider.GetRequiredService<CollectionNamingStrategy>();
+        var collectionNamingStrategy = provider.GetRequiredService<ICollectionNamingStrategy>();
         var collectionName = collectionNamingStrategy.GetName(entityType);
 
         var mongoDatabase = provider.GetRequiredService<IMongoDatabase>();
