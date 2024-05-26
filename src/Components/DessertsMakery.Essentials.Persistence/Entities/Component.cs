@@ -1,6 +1,6 @@
 ﻿using DessertsMakery.Common.Persistence.Mongo;
 
-namespace DessertsMakery.Expenses.Persistence.Entities;
+namespace DessertsMakery.Essentials.Persistence.Entities;
 
 public sealed class Component : MongoEntity
 {
