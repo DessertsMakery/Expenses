@@ -1,6 +1,6 @@
 ﻿using Ardalis.SmartEnum;
 
-namespace DessertsMakery.Expenses.Persistence.Entities;
+namespace DessertsMakery.Essentials.Persistence.Entities;
 
 public sealed class Measuring : SmartEnum<Measuring>
 {

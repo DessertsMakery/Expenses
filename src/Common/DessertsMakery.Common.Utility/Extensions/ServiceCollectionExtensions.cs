@@ -7,18 +7,24 @@ namespace DessertsMakery.Common.Utility.Extensions;
 public static class ServiceCollectionExtensions
 {
     public const string Service = nameof(Service);
-    private static readonly Assembly ThisAssembly = typeof(ServiceCollectionExtensions).Assembly;
+    public const string Mapper = nameof(Mapper);
 
-    public static IServiceCollection AddServices(
-        this IServiceCollection services,
-        Assembly assembly,
-        string suffix = Service
-    ) => services.AddServices(new[] { assembly });
+    public static IServiceCollection AddMappers(this IServiceCollection services, Assembly assembly) =>
+        services.AddServices(new[] { assembly });
 
-    public static IServiceCollection AddServices(
+    public static IServiceCollection AddMappers(this IServiceCollection services, IEnumerable<Assembly> assemblies) =>
+        services.AddDependencies(assemblies, Mapper);
+
+    public static IServiceCollection AddServices(this IServiceCollection services, Assembly assembly) =>
+        services.AddServices(new[] { assembly });
+
+    public static IServiceCollection AddServices(this IServiceCollection services, IEnumerable<Assembly> assemblies) =>
+        services.AddDependencies(assemblies, Service);
+
+    private static IServiceCollection AddDependencies(
         this IServiceCollection services,
         IEnumerable<Assembly> assemblies,
-        string suffix = Service
+        string suffix
     )
     {
         var implementations = assemblies.SelectMany(x => x.DefinedTypes).Where(ServiceNonAbstractClass).ToArray();

@@ -13,6 +13,7 @@
     <ItemGroup>
       <ProjectReference Include="..\..\Common\DessertsMakery.Common.Persistence\DessertsMakery.Common.Persistence.csproj" />
       <ProjectReference Include="..\..\Expenses\DessertsMakery.Expenses.Persistence\DessertsMakery.Expenses.Persistence.csproj" />
+      <ProjectReference Include="..\DessertsMakery.Essentials.Persistence\DessertsMakery.Essentials.Persistence.csproj" />
     </ItemGroup>
 
 </Project>

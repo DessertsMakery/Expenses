@@ -22,11 +22,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DessertsMakery.Common.Persi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DessertsMakery.Common.Utility", "src\Common\DessertsMakery.Common.Utility\DessertsMakery.Common.Utility.csproj", "{D072B72E-B8D9-4F3B-9B94-E3F37E36B92E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Components", "Components", "{E07E6448-6BE0-46C7-BBC7-036A87643162}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Essentials", "Essentials", "{E07E6448-6BE0-46C7-BBC7-036A87643162}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DessertsMakery.Components.Persistence", "src\Components\DessertsMakery.Components.Persistence\DessertsMakery.Components.Persistence.csproj", "{F5D5576C-61B3-46F8-B345-6211A34C1D04}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DessertsMakery.Essentials.Persistence", "src\Components\DessertsMakery.Essentials.Persistence\DessertsMakery.Essentials.Persistence.csproj", "{F5D5576C-61B3-46F8-B345-6211A34C1D04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DessertsMakery.Components.SDK", "src\Components\DessertsMakery.Components.SDK\DessertsMakery.Components.SDK.csproj", "{E0545A1C-ACE8-4527-B60E-839F503DAABC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DessertsMakery.Essentials.SDK", "src\Components\DessertsMakery.Essentials.SDK\DessertsMakery.Essentials.SDK.csproj", "{E0545A1C-ACE8-4527-B60E-839F503DAABC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Essentials", "Essentials", "{4E4E6440-DB90-4E17-8248-C8D87F132E30}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "integration", "integration", "{50DD5B13-4A4B-4783-A599-B85821272E9E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "unit", "unit", "{908669D4-602F-4207-B88E-8C7A3CB2F892}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,6 +52,9 @@ Global
 		{E07E6448-6BE0-46C7-BBC7-036A87643162} = {F0E17DB4-0F25-47AD-B95C-A17E3D39E084}
 		{F5D5576C-61B3-46F8-B345-6211A34C1D04} = {E07E6448-6BE0-46C7-BBC7-036A87643162}
 		{E0545A1C-ACE8-4527-B60E-839F503DAABC} = {E07E6448-6BE0-46C7-BBC7-036A87643162}
+		{4E4E6440-DB90-4E17-8248-C8D87F132E30} = {B73736D5-AD8F-4B8C-BC80-7E8053E7022B}
+		{50DD5B13-4A4B-4783-A599-B85821272E9E} = {4E4E6440-DB90-4E17-8248-C8D87F132E30}
+		{908669D4-602F-4207-B88E-8C7A3CB2F892} = {4E4E6440-DB90-4E17-8248-C8D87F132E30}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{4E811246-E99E-4720-B133-8AFA66EF5794}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
