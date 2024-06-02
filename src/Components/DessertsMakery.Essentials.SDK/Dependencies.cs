@@ -12,7 +12,7 @@ public static class Dependencies
 
     public static IServiceCollection AddEssentialsSdk(this IServiceCollection services, IConfiguration configuration)
     {
-        services.AddPersistence(configuration);
+        services.AddPersistence(ThisAssembly, configuration);
         services.AddServices(ThisAssembly);
         services.AddMappers(ThisAssembly);
         return services;

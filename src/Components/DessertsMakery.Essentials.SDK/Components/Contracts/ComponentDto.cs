@@ -1,11 +1,10 @@
-﻿using DessertsMakery.Essentials.Persistence.Entities;
-
-namespace DessertsMakery.Essentials.SDK.Components.Contracts;
+﻿namespace DessertsMakery.Essentials.SDK.Components.Contracts;
 
 public sealed record ComponentDto(
     Guid Id,
     string Name,
-    Measuring Measuring,
+    string Measuring,
+    string ComponentType,
     decimal? Proportion,
     Guid? ParentId,
     DateTime CreatedAt,

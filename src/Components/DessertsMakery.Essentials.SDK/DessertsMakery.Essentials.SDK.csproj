@@ -16,4 +16,11 @@
       <ProjectReference Include="..\DessertsMakery.Essentials.Persistence\DessertsMakery.Essentials.Persistence.csproj" />
     </ItemGroup>
 
+
+    <ItemGroup>
+        <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+            <_Parameter1>DessertsMakery.Essentials.SDK.Benchmarks</_Parameter1>
+        </AssemblyAttribute>
+    </ItemGroup>
+
 </Project>

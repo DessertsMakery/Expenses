@@ -34,6 +34,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "integration", "integration"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "unit", "unit", "{908669D4-602F-4207-B88E-8C7A3CB2F892}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DessertsMakery.Essentials.SDK.Unit.Tests", "tests\Essentials\unit\DessertsMakery.Essentials.SDK.Unit.Tests\DessertsMakery.Essentials.SDK.Unit.Tests.csproj", "{F8642247-BD40-4DD4-99F4-65FABEC55A82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DessertsMakery.Essentials.SDK.Integration.Tests", "tests\Essentials\integration\DessertsMakery.Essentials.SDK.Integration.Tests\DessertsMakery.Essentials.SDK.Integration.Tests.csproj", "{ECB3FF58-81E6-4B76-B6BD-254368B8A1B4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "benchmarks", "benchmarks", "{81B96631-13F6-4AE9-A9EA-67442FF248B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DessertsMakery.Essentials.SDK.Benchmarks", "tests\Essentials\benchmarks\DessertsMakery.Essentials.SDK.Benchmarks\DessertsMakery.Essentials.SDK.Benchmarks.csproj", "{8D1DD481-3CAC-4901-BBEF-1DB78D20D945}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +63,10 @@ Global
 		{4E4E6440-DB90-4E17-8248-C8D87F132E30} = {B73736D5-AD8F-4B8C-BC80-7E8053E7022B}
 		{50DD5B13-4A4B-4783-A599-B85821272E9E} = {4E4E6440-DB90-4E17-8248-C8D87F132E30}
 		{908669D4-602F-4207-B88E-8C7A3CB2F892} = {4E4E6440-DB90-4E17-8248-C8D87F132E30}
+		{F8642247-BD40-4DD4-99F4-65FABEC55A82} = {908669D4-602F-4207-B88E-8C7A3CB2F892}
+		{ECB3FF58-81E6-4B76-B6BD-254368B8A1B4} = {50DD5B13-4A4B-4783-A599-B85821272E9E}
+		{81B96631-13F6-4AE9-A9EA-67442FF248B8} = {4E4E6440-DB90-4E17-8248-C8D87F132E30}
+		{8D1DD481-3CAC-4901-BBEF-1DB78D20D945} = {81B96631-13F6-4AE9-A9EA-67442FF248B8}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{4E811246-E99E-4720-B133-8AFA66EF5794}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -81,5 +93,17 @@ Global
 		{E0545A1C-ACE8-4527-B60E-839F503DAABC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0545A1C-ACE8-4527-B60E-839F503DAABC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0545A1C-ACE8-4527-B60E-839F503DAABC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8642247-BD40-4DD4-99F4-65FABEC55A82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8642247-BD40-4DD4-99F4-65FABEC55A82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8642247-BD40-4DD4-99F4-65FABEC55A82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8642247-BD40-4DD4-99F4-65FABEC55A82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECB3FF58-81E6-4B76-B6BD-254368B8A1B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECB3FF58-81E6-4B76-B6BD-254368B8A1B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECB3FF58-81E6-4B76-B6BD-254368B8A1B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECB3FF58-81E6-4B76-B6BD-254368B8A1B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D1DD481-3CAC-4901-BBEF-1DB78D20D945}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D1DD481-3CAC-4901-BBEF-1DB78D20D945}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D1DD481-3CAC-4901-BBEF-1DB78D20D945}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D1DD481-3CAC-4901-BBEF-1DB78D20D945}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

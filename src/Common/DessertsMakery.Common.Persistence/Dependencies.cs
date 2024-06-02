@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using DessertsMakery.Common.Persistence.Mongo;
 using DessertsMakery.Common.Utility.Extensions;
+using DessertsMakery.Common.Utility.Helpers;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
@@ -11,15 +12,17 @@ namespace DessertsMakery.Common.Persistence;
 
 public static class Dependencies
 {
-    private static readonly Assembly ThisAssembly = typeof(Dependencies).Assembly;
-
-    public static IServiceCollection AddPersistence(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection? AddPersistence(
+        this IServiceCollection services,
+        Assembly assembly,
+        IConfiguration configuration
+    )
     {
         services.AddConfiguration<MongoSettings>(configuration);
         services.TryAddSingleton<IMongoClient>(MongoClientFactory);
         services.TryAddScoped(MongoDatabaseFactory);
         services.TryAddTransient<ICollectionNamingStrategy, CollectionNamingStrategy>();
-        services.TryAddMongoCollections();
+        services.TryAddMongoCollections(assembly);
         return services;
     }
 
@@ -37,10 +40,14 @@ public static class Dependencies
         return mongoClient.GetDatabase(internalSettings.DatabaseName);
     }
 
-    private static void TryAddMongoCollections(this IServiceCollection services)
+    private static void TryAddMongoCollections(this IServiceCollection services, Assembly assembly)
     {
         var marker = typeof(MongoEntity);
-        var entityTypes = ThisAssembly.DefinedTypes.Where(MongoEntityIsPublicNonAbstractClass).ToArray();
+        var assemblies = AssemblyHelper.LoadAssemblies(assembly);
+        var entityTypes = assemblies
+            .SelectMany(x => x.DefinedTypes)
+            .Where(MongoEntityIsPublicNonAbstractClass)
+            .ToArray();
         foreach (var entityType in entityTypes)
         {
             var mongoCollectionType = typeof(IMongoCollection<>).MakeGenericType(entityType);
