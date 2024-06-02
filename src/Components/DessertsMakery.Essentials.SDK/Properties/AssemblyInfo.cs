@@ -1,1 +1,0 @@
-﻿[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("DessertsMakery.Essentials.SDK.Unit.Tests")]
