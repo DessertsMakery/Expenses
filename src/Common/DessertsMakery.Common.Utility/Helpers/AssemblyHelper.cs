@@ -4,23 +4,28 @@ namespace DessertsMakery.Common.Utility.Helpers;
 
 public static class AssemblyHelper
 {
-    public static Assembly[] LoadAssemblies<T>(string prefix)
-    {
-        var assembly = typeof(T).Assembly;
-        var loaded = new HashSet<string>();
-        var container = new HashSet<Assembly> { assembly };
+    public static Assembly[] LoadAssemblies<T>(string? prefix = null) => LoadAssemblies(typeof(T).Assembly, prefix);
 
-        return LoadAssemblies(assembly, loaded, container, prefix);
+    public static Assembly[] LoadAssemblies(Assembly mainAssembly, string? prefix = null)
+    {
+        var loaded = new HashSet<string>();
+        var container = new HashSet<Assembly> { mainAssembly };
+
+        return LoadAssemblies(mainAssembly, loaded, container, prefix);
     }
 
     private static Assembly[] LoadAssemblies(
         Assembly current,
         ISet<string> loaded,
         ICollection<Assembly> container,
-        string prefix
+        string? prefix
     )
     {
-        var referencedAssemblies = current.GetReferencedAssemblies().Where(x => x.Name!.StartsWith(prefix));
+        IEnumerable<AssemblyName> referencedAssemblies = current.GetReferencedAssemblies();
+        if (prefix is not null)
+        {
+            referencedAssemblies = referencedAssemblies.Where(x => x.Name!.StartsWith(prefix));
+        }
 
         foreach (var referencedAssembly in referencedAssemblies)
         {
